@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
 import { Link } from 'react-router-dom';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
     const {registerUser, googleUser, githubUser} = useContext(AuthContext);
@@ -22,11 +23,17 @@ const Register = () => {
         .then(result=>{
             const loggedUser = result.user;
             console.log(loggedUser);
-            form.reset()
+            form.reset();
+            profile(loggedUser, name, photo)
         })
         .catch(error => {
             console.log(error);
             setError(error.message)
+        })
+    }
+    const profile = (loggedUser, name, photo)=>{
+        return updateProfile(loggedUser, {
+            displayName: name, photoURL: photo
         })
     }
     const handleGoogle = ()=>{
