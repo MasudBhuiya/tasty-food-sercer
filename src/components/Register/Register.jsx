@@ -3,7 +3,7 @@ import { AuthContext } from '../Context/AuthProvider';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
-    const {registerUser} = useContext(AuthContext);
+    const {registerUser, googleUser, githubUser} = useContext(AuthContext);
     const [error, setError]= useState(null);
     const handleRegister =(e)=>{
         setError('')
@@ -13,6 +13,10 @@ const Register = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
+        if(password.length < 6){
+            setError('Password is less then 6 characters');
+            return;
+        }
 
         registerUser(email, password)
         .then(result=>{
@@ -24,6 +28,18 @@ const Register = () => {
             console.log(error);
             setError(error.message)
         })
+    }
+    const handleGoogle = ()=>{
+        googleUser()
+        .then(result=>{})
+        .catch(error=> {
+            setError(error.message)
+        })
+    }
+    const handleGithub = ()=>{
+        githubUser()
+        .then(res=>{})
+        .catch(error => setError(error.message))
     }
     return (
             <form onSubmit={handleRegister} className='p-4 text-center' >
@@ -37,9 +53,12 @@ const Register = () => {
             <p className='text-xl'>Password:</p>
             <input type="password" placeholder="Enter password" name="password" className="input input-bordered input-info w-full max-w-xs mb-4" required/>
             <br />
-            <p>If you already sign out!!! go <Link to="/login" className="btn btn-active btn-link pl-0">Login</Link></p>
+            <p className='text-semibold mb-2'>Else register with_</p>
+            <button onClick={handleGoogle} className="btn btn-outline btn-info mr-3">Google</button>
+            <button onClick={handleGithub} className="btn btn-outline btn-info">GitHub</button>
             <br />
-            <p>{error}</p>
+            <p>If you already sign out!!! go <Link to="/login" className="btn btn-active btn-link pl-0">Login</Link></p>
+            <p className='text-yellow-400'>{error}</p>
             <br />
             <input className='bg-sky-400 px-12 py-3 rounded font-bold text-white' type="submit" name="login" value="Register" id="" />
             </form>
