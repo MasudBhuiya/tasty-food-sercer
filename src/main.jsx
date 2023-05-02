@@ -11,6 +11,7 @@ import AuthProvider from './components/Context/AuthProvider.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
 import Home from './components/Home/Home.jsx';
+import Details from './components/Details/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,12 +23,17 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: '/login',
+        path: 'login',
         element: <Login></Login>
       },
       {
-        path: '/register',
+        path: 'register',
         element: <Register></Register>
+      },
+      {
+        path: 'details/:id',
+        element: <Details></Details>
+        
       }
     ]
   },
