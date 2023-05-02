@@ -15,6 +15,7 @@ import Details from './components/Details/Details.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 import Error from './components/Error/Error.jsx';
+import Blog from './components/Blog/Blog.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         path: 'details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader:({params})=> fetch(`http://localhost:5000/chef/${params.id}`)
+      },
+      {
+        path: 'blog',
+        element: <Blog></Blog>
       }
       
     ]
