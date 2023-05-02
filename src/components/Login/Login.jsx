@@ -1,11 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
     const {loginUser, googleUser, githubUser} = useContext(AuthContext);
     const [error, setError]= useState(null);
+    const navigate = useNavigate()
+    const location = useLocation();
+    // console.log(location);
+    const page = location.state?.form?.pathname;
     const handleLogin =(e)=>{
         setError('')
         e.preventDefault();
@@ -17,7 +21,8 @@ const Login = () => {
         .then(result=>{
             const loggedUser = result.user;
             console.log(loggedUser);
-            form.reset()
+            form.reset();
+            navigate(page)
         })
         .catch(error => {
             console.log(error);
@@ -53,7 +58,7 @@ const Login = () => {
             <br />
             <p>{error}</p>
             <br />
-            <input className='bg-sky-400 px-12 py-3 rounded font-bold text-white' type="submit" name="login" value="Login" id="" />
+            <input  className='bg-sky-400 px-12 py-3 rounded font-bold text-white' type="submit" name="login" value="Login" id="" />
             </form>
     );
 };

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 
 const PrivateRoute = ({children}) => {
-    const {user, loading} = useContext(AuthContext)
-    
+    const {user, loading} = useContext(AuthContext);
+     const location = useLocation()
         if(loading){
             return  <button className='flex justify-center items-center text-center' disabled type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center">
             <svg aria-hidden="true" role="status" class="inline w-4 h-4 mr-3 text-white animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +17,7 @@ const PrivateRoute = ({children}) => {
         if(user){
             return children
         }
-    return <Navigate to="login"></Navigate>
+    return <Navigate to="login" state={{form: location}} replace></Navigate>
 };
 
 export default PrivateRoute;

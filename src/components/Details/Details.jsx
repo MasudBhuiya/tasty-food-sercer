@@ -35,7 +35,6 @@ const Details = () => {
                         <p className='font-bold'>Recipes: {numberOfRecipes}</p>
                         <p className='font-bold'>Experience: {yearsOfExperience}</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Listen</button>
                         </div>
                     </div>
                 </div>

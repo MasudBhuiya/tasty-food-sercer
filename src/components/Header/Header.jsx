@@ -5,7 +5,7 @@ import Active from '../Active/Active';
 
 const Header = () => {
   const {user, logOut} = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   const handleLogout = ()=>{
     logOut()
     .then()
@@ -23,6 +23,8 @@ const Header = () => {
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li><Active to="/">Home</Active></li>
         <li><Active to="/blog">Blog</Active></li>
+        <li><Active to="/login">Login</Active></li>
+        <li><Active to="/Register">Register</Active></li>
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl text-orange-500">Tasty Foods</a>
@@ -31,6 +33,8 @@ const Header = () => {
     <ul className="menu menu-horizontal px-1">
     <li><Active to="/">Home</Active></li>
         <li><Active to="/blog">Blog</Active></li>
+        <li><Active to="/login">Login</Active></li>
+        <li><Active to="/Register">Register</Active></li>
     </ul>
   </div>
   <div className="navbar-end">
