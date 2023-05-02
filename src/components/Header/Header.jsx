@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 
 const Header = () => {
-  const {user} = useContext(AuthContext)
+  const {user} = useContext(AuthContext);
+  console.log(user)
     return (
         <div className="navbar bg-base-100">
   <div className="navbar-start">
@@ -26,7 +27,7 @@ const Header = () => {
   </div>
   <div className="navbar-end">
     {
-        user ? <img src="" alt="" /> : <button className='bg-red-500 rounded px-3 py-2 text-white me-2'><Link to='/login'>Login</Link></button>
+        user ?  <span className='flex'><img style={{height: '30px', width: '30px', marginTop:'5px' ,borderRadius: '50%'}} title={user.displayName} src={user.photoURL} alt="" /><button className='bg-red-500 rounded px-3 py-2 text-white me-2 ms-2'>LogOut</button></span> : <button className='bg-red-500 rounded px-3 py-2 text-white me-2 '><Link to='/login'>Login</Link></button>
     }
   </div>
 </div>
