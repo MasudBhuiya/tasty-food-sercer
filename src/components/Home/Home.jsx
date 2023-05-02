@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
-
 const Home = () => {
     const [chef, setChef] = useState([])
 
@@ -28,7 +27,7 @@ const Home = () => {
 }
            </div>
            </div>
-           <div className='bg-gray-700 text-white p-5 mt-10 rounded mb-10'>
+           <div className='bg-gray-500 text-white p-5 mt-10 rounded mb-10'>
             <h1 className='text-3xl font-bold text-center mb-3'>Hhy Choose Us</h1>
             <p className='p-5'>Quality of Service, Food, Ambiance and Value of Money are the primary elements for choosing a restaurant. Mariano is one of the most exquisite fine-dinning restaurant in twin cities with a captivating view of Murree Hills, perfect ambiance and scrumptious food. Our team is always looking forward to provide you exceptional services and win your hearts out.</p>
             <div className='p-5 flex justify-between '>
@@ -45,6 +44,15 @@ const Home = () => {
                 <p className='font-semibold text-2xl'> 1M+</p>
                 <p>Order</p>
                 </div>
+            </div>
+           </div>
+           <div className='mb-8'>
+            <h1 className='text-center font-bold text-3xl mb-5'>Contact With</h1>
+            <div className='sm:flex sm:text-center justify-between'>
+                <img className='w-[100px]' src="https://1000logos.net/wp-content/uploads/2019/06/Google-Logo.jpg" alt="" />
+                <img className='w-[100px]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB90YfG8rA7qHXyhFU7oi8KUoQGNgu7nGrAXAImwJKqGSJ_Kp3Dl-qK-f0yrV9JOi32yY&usqp=CAU" alt="" />
+                <img className='w-[100px]' src="https://thumbs.dreamstime.com/b/print-204012274.jpg" alt="" />
+                <img className='w-[100px]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_xYhdiLUOE7ygFrBFaxGmJDTempr8qRH6aXQgkdA&s" alt="" />
             </div>
            </div>
         </div>

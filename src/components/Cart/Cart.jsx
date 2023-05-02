@@ -4,7 +4,7 @@ const Cart = ({chef}) => {
     console.log(chef);
     const {likes, name, numberOfRecipes, picture, yearsOfExperience}= chef;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl pt-2 mb-3 ">
+        <div className="card md:w-96 bg-base-100 shadow-xl pt-2 mb-3 ">
   <figure className=''><img className='rounded' src={picture} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{name}</h2>
