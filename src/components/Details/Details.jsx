@@ -26,7 +26,7 @@ const Details = () => {
     return (
         <div>
             <div>
-                <div className="card lg:card-side bg-slate-200 shadow-xl p-4">
+            <div className="card lg:card-side bg-slate-200 shadow-xl p-4">
                     <figure><img className='md:w-[600px] lg:w-[1000px]' src={picture} alt="Album" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-2xl font-bold">{name}</h2>

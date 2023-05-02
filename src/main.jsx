@@ -13,11 +13,14 @@ import Register from './components/Register/Register.jsx';
 import Home from './components/Home/Home.jsx';
 import Details from './components/Details/Details.jsx';
 import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
+import Error from './components/Error/Error.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<Error></Error>,
     children: [
       {
         path:'/',
@@ -33,9 +36,10 @@ const router = createBrowserRouter([
       },
       {
         path: 'details/:id',
-        element: <Details></Details>,
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader:({params})=> fetch(`http://localhost:5000/chef/${params.id}`)
       }
+      
     ]
   },
 ]);
