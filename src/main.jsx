@@ -12,6 +12,7 @@ import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
 import Home from './components/Home/Home.jsx';
 import Details from './components/Details/Details.jsx';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {

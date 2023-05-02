@@ -10,7 +10,7 @@ const Home = () => {
     },[])
     return (
         <div className='w-[90%] mx-auto'>
-            <div className='md:flex justify-between items-center p-4'>
+            <div className='md:flex justify-between items-center p-4 bg-orange-200 mt-5'>
             <div className=' text-center justify-between p-3 md:w-[50%] mx-auto'>
                 <h1 className='text-5xl text-orange-500 font-bold mb-2'>Chef Description</h1>
                 <p >As a chef at our popular restaurant, you will have the opportunity to create a stunning selection of diverse menu items for our customers. You will be able to put your skills to good use creating masterful dishes for lunch and dinner, as well as mouthwatering desserts and appetizers.</p>

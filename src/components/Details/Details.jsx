@@ -1,15 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Details = () => {
-    const [recipe, setRecipe] = useState([])
+    const [buton, setButon] = useState(true)
+    const [boton, setBoton] = useState(true)
+    const [button, setButton] = useState(true)
     const data = useLoaderData();
-    const { rating, likes, id, name, bio, numberOfRecipes, picture, yearsOfExperience, recipes
+    const { likes, id, name, bio, numberOfRecipes, picture, yearsOfExperience, recipes
     } = data;
-    // const allrec = recipes.map(r=> r)
-    // console.log(data)
+
+
+    const handleFavourite = ()=>{
+        toast("Added to Favourite!!!");
+    }
+    const handleFavourites = ()=>{
+        toast("Added to Favourite!!!");
+    }
+    const handleFavourited = ()=>{
+        toast("Added to Favourite!!!");
+    }
 
     return (
         <div>
@@ -37,7 +49,7 @@ const Details = () => {
                         <p> <span className='text-orange-400'><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStarHalfAlt} /></span> {recipes[0].rating}</p>
                         <p>Likes: 4500</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">View Recipes</button>
+                        {buton ? <button onClick={()=>handleFavourite(setButon(false))} className="btn btn-primary">Favourite</button> : <button onClick={handleFavourite} disabled className="btn btn-primary">Favourite</button>}
                         </div>
                     </div>
                 </div>
@@ -49,7 +61,7 @@ const Details = () => {
                         <p> <span className='text-orange-400'><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStarHalfAlt} /></span> {recipes[1].rating}</p>
                         <p>Likes: 4000</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">View Recipes</button>
+                        {boton ? <button onClick={()=>handleFavourites(setBoton(false))}  className="btn btn-primary">Favourite</button> : <button onClick={handleFavourites} disabled className="btn btn-primary">Favourite</button>}
                         </div>
                     </div>
                 </div>
@@ -61,7 +73,8 @@ const Details = () => {
                         <p> <span className='text-orange-400'><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStarHalfAlt} /></span> {recipes[2].rating}</p>
                         <p>Likes: 5000</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">View Recipes</button>
+                            {button ? <button onClick={()=>handleFavourited(setButton(false))} className="btn btn-primary">Favourite</button> : <button onClick={handleFavourited} disabled className="btn btn-primary">Favourite</button>}
+                            <ToastContainer />
                         </div>
                     </div>
                 </div>
