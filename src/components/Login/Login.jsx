@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const Login = () => {
-    const {loginUser} = useContext(AuthContext);
+    const {loginUser, googleUser, githubUser} = useContext(AuthContext);
     const [error, setError]= useState(null);
     const handleLogin =(e)=>{
         setError('')
@@ -23,6 +23,19 @@ const Login = () => {
             console.log(error);
             setError(error.message)
         })
+        
+    }
+    const handleGoogle = ()=>{
+        googleUser()
+        .then(result=>{})
+        .catch(error=> {
+            setError(error.message)
+        })
+    }
+    const handleGithub = ()=>{
+        githubUser()
+        .then(res=>{})
+        .catch(error => setError(error.message))
     }
     return (
         <form onSubmit={handleLogin} className='p-4 text-center' >
@@ -34,6 +47,9 @@ const Login = () => {
             <br />
             <p>New to this site? please <Link to="/register" className="btn btn-active btn-link pl-0">Register</Link></p>
             <br />
+            <p className='text-semibold mb-2'>Else Login with_</p>
+            <button onClick={handleGoogle} className="btn btn-outline btn-info mr-3">Google</button>
+            <button onClick={handleGithub} className="btn btn-outline btn-info">GitHub</button>
             <br />
             <p>{error}</p>
             <br />
