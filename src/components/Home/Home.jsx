@@ -28,22 +28,22 @@ const Home = () => {
 }
            </div>
            </div>
-           <div className='bg-gray-500 text-white p-5 mt-10 rounded mb-10'>
+           <div className='bg-zinc-300 text-white p-5 mt-10 rounded mb-10'>
             <h1 className='text-3xl font-bold text-center mb-3'>Hhy Choose Us</h1>
             <p className='p-5'>Quality of Service, Food, Ambiance and Value of Money are the primary elements for choosing a restaurant. Mariano is one of the most exquisite fine-dinning restaurant in twin cities with a captivating view of Murree Hills, perfect ambiance and scrumptious food. Our team is always looking forward to provide you exceptional services and win your hearts out.</p>
-            <div className='p-5 flex justify-between '>
+            <div className='p-5'>
                 <div>
-                <p className='font-semibold text-2xl'>17+</p>
-                <p>Catering</p>
+                <p className='font-semibold text-2xl'>Chef’s Pencil</p>
+                <p>Started as an online cookbook where professional Chefs share their favorite recipes, Chef's Pencil has become a valuable resource for professional chef recipes, professional cooking advice, and news from the culinary industry. Chef's Pencil was started by Sydney-based Chef Paul Hegeman. In addition to recipes, our featured Chefs also share culinary techniques, advice on cooking materials, and lots of tips for home cooks.</p>
                 </div>
                <div>
                <p className='font-semibold text-2xl'> 
-                100+</p>
-                <p>Menu</p>
+               Tried and Tested Chef Recipes</p>
+                <p>Chef's Pencil only features recipes from professional Chefs and so all our recipes are tried and tested.  Take a look at our most popular recipes or check out the latest dishes we’ve added to the site.</p>
                </div>
                 <div>
-                <p className='font-semibold text-2xl'> 1M+</p>
-                <p>Order</p>
+                <p className='font-semibold text-2xl'>Meet Our Chefs</p>
+                <p>Need some help deciding what to choose? Take a look at our most popular recipes or check out the latest dishes we’ve added to the site.</p>
                 </div>
             </div>
            </div>
