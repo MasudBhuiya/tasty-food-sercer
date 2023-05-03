@@ -28,7 +28,7 @@ const Home = () => {
 }
            </div>
            </div>
-           <div className='bg-zinc-300 text-white p-5 mt-10 rounded mb-10'>
+           <div className='bg-zinc-600 text-white p-5 mt-10 rounded mb-10'>
             <h1 className='text-3xl font-bold text-center mb-3'>Hhy Choose Us</h1>
             <p className='p-5'>Quality of Service, Food, Ambiance and Value of Money are the primary elements for choosing a restaurant. Mariano is one of the most exquisite fine-dinning restaurant in twin cities with a captivating view of Murree Hills, perfect ambiance and scrumptious food. Our team is always looking forward to provide you exceptional services and win your hearts out.</p>
             <div className='p-5'>
