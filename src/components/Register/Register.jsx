@@ -6,6 +6,7 @@ import { updateProfile } from 'firebase/auth';
 const Register = () => {
     const {registerUser, googleUser, githubUser} = useContext(AuthContext);
     const [error, setError]= useState(null);
+    const [show, setShow] = useState(false)
     const handleRegister =(e)=>{
         setError('')
         e.preventDefault();
@@ -58,7 +59,12 @@ const Register = () => {
             <p className='text-xl'>Your Email:</p>
             <input type="email" placeholder="Enter email" name="email" className="input input-bordered input-info w-full max-w-xs mb-4" required/>
             <p className='text-xl'>Password:</p>
-            <input type="password" placeholder="Enter password" name="password" className="input input-bordered input-info w-full max-w-xs mb-4" required/>
+            <input type={show ? "text" : "password"} placeholder="Enter password" name="password" className="input input-bordered input-info w-full max-w-xs mb-4" required/>
+            <p onClick={()=>setShow(!show)}>
+                {
+                    show ? <Link className='border rounded p-1'>Hide Password</Link>: <Link className='border rounded p-1'>Show Password</Link>
+                }
+            </p>
             <br />
             <p className='text-semibold mb-2'>Else register with_</p>
             <button onClick={handleGoogle} className="btn btn-outline btn-info mr-3">Google</button>

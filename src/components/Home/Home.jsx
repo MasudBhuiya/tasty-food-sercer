@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
+
 const Home = () => {
     const [chef, setChef] = useState([])
 

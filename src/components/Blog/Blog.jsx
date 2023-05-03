@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Document, Page } from 'react-pdf';
 
 const Blog = () => {
+    const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+  const handlePDF = ()=>{
+    setPageNumber(25)
+    setNumPages(39)
+  }
+
     return (
         <div>
-            <button className="btn btn-primary mt-3 mb-4">Get Pdf</button>
+            <Document file="somefile.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+        <Page pageNumber={pageNumber} />
+      </Document>
+      <button onClick={handlePDF}>PDF</button>
+      <p>page {pageNumber} of {numPages} </p>
             <div>
                 <p>Q: Tell us the differences between uncontrolled and controlled components.</p>
                 <h2>Ans: In react, controlled components refer to components which have their state and vegavior controlled by parent component. this components passed the props from the parent component to update their state and vehavior. and uncontrolled components refer to components which manage their own state internally.</h2>

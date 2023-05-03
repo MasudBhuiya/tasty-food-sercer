@@ -9,7 +9,7 @@ const {user} = useContext(AuthContext)
     const {likes,id, name, numberOfRecipes, picture, yearsOfExperience}= chef;
     const navigate = useNavigate()
     const handleViewDetails = ()=>{
-            navigate(`/details/${id}`)
+              navigate(`/details/${id}`)
     }
     return (
         <div className="card md:w-96 bg-base-100 shadow-xl pt-2 mb-3 ">

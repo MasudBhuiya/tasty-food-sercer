@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
+    const [show, setShow] = useState(false)
     const {loginUser, googleUser, githubUser} = useContext(AuthContext);
     const [error, setError]= useState(null);
     const navigate = useNavigate()
@@ -21,25 +22,30 @@ const Login = () => {
         .then(result=>{
             const loggedUser = result.user;
             console.log(loggedUser);
-            form.reset();
             navigate(page)
+            form.reset();
         })
         .catch(error => {
             console.log(error);
-            setError(error.message)
+            // setError(error.message)
         })
         
     }
     const handleGoogle = ()=>{
         googleUser()
-        .then(result=>{})
+        .then(result=>{
+            navigate(page)
+        })
         .catch(error=> {
             setError(error.message)
+
         })
     }
     const handleGithub = ()=>{
         githubUser()
-        .then(res=>{})
+        .then(res=>{
+            navigate(page)
+        })
         .catch(error => setError(error.message))
     }
     return (
@@ -48,7 +54,12 @@ const Login = () => {
             <p className='text-xl'>Your Email:</p>
             <input type="email" placeholder="Enter email" name="email" className="input input-bordered input-info w-full max-w-xs mb-4" required/>
             <p className='text-xl'>Password:</p>
-            <input type="password" placeholder="Enter password" name="password" className="input input-bordered input-info w-full max-w-xs mb-4" required/>
+            <input type={show ? "text" : "password"} placeholder="Enter password" name="password" className="input input-bordered input-info w-full max-w-xs mb-4" required/>
+            <p onClick={()=>setShow(!show)}>
+                {
+                    show ? <Link className='border rounded p-1'>Hide Password</Link>: <Link className='border rounded p-1'>Show Password</Link>
+                }
+            </p>
             <br />
             <p>New to this site? please <Link to="/register" className="btn btn-active btn-link pl-0">Register</Link></p>
             <br />
@@ -56,9 +67,9 @@ const Login = () => {
             <button onClick={handleGoogle} className="btn btn-outline btn-info mr-3">Google</button>
             <button onClick={handleGithub} className="btn btn-outline btn-info">GitHub</button>
             <br />
-            <p>{error}</p>
+            <p className='text-yellow-500'>{error}</p>
             <br />
-            <input  className='bg-sky-400 px-12 py-3 rounded font-bold text-white' type="submit" name="login" value="Login" id="" />
+            <input className='bg-sky-400 px-12 py-3 rounded font-bold text-white' type="submit" name="login" value="Login" id="" />
             </form>
     );
 };
