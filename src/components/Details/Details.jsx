@@ -39,12 +39,14 @@ const Details = () => {
                     </div>
                 </div>
             </div>
-            <div className='md:flex w-[90%] mx-auto justify-between mt-12'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 w-[90%] mx-auto justify-between mt-12'>
                 <div className="card sm:w-96  bg-base-100 shadow-xl pt-2 mb-3 ">
                     <figure className='h-64'><img className='rounded' src={recipes[0].image} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="font-bold text-2xl">{recipes[0].title}</h2>
                         <p> <span className='font-bold text-lg'>Ingredients:</span> {recipes[0].ingredients.map(item => <li>{item}</li>)}</p>
+                        <p><span className='font-bold text-lg'>Cooking method:</span>
+                        <br />{recipes[0].method}</p>
                         <p> <span className='text-orange-400'><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStarHalfAlt} /></span> {recipes[0].rating}</p>
                         <p>Likes: 4500</p>
                         <div className="card-actions justify-end">
@@ -57,6 +59,7 @@ const Details = () => {
                     <div className="card-body">
                         <h2 className="font-bold text-2xl">{recipes[1].title}</h2>
                         <p> <span className='font-bold text-lg'>Ingredients:</span> {recipes[1].ingredients.map(item => <li>{item}</li>)}</p>
+                        <p><span className='font-bold text-lg'>Cooking method:</span><br />{recipes[1].method}</p>
                         <p> <span className='text-orange-400'><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStarHalfAlt} /></span> {recipes[1].rating}</p>
                         <p>Likes: 4000</p>
                         <div className="card-actions justify-end">
@@ -69,6 +72,7 @@ const Details = () => {
                     <div className="card-body">
                         <h2 className="font-bold text-2xl">{recipes[2].title}</h2>
                         <p> <span className='font-bold text-lg'>Ingredients:</span> {recipes[2].ingredients.map(item => <li>{item}</li>)}</p>
+                        <p><span className='font-bold text-lg'>Cooking method: <br /></span>{recipes[2].method}</p>
                         <p> <span className='text-orange-400'><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStarHalfAlt} /></span> {recipes[2].rating}</p>
                         <p>Likes: 5000</p>
                         <div className="card-actions justify-end">

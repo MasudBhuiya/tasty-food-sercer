@@ -10,7 +10,10 @@ import Main from './components/Loyout/Main.jsx';
 import AuthProvider from './components/Context/AuthProvider.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
-import Home from './components/Home/Home.jsx';
+
+// import Home from './components/Home/Home.jsx';
+const LazyHome = React.lazy(()=> import('./components/Home/Home.jsx'))
+
 import Details from './components/Details/Details.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
@@ -25,7 +28,7 @@ const router = createBrowserRouter([
     children: [
       {
         path:'/',
-        element: <Home></Home>
+        element: <React.Suspense fallback='Loading...'><LazyHome></LazyHome></React.Suspense>
       },
       {
         path: 'login',
@@ -38,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: 'details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader:({params})=> fetch(`http://localhost:5000/chef/${params.id}`)
+        loader:({params})=> fetch(`https://assignment-ten-server-masudbhuiya.vercel.app/chef/${params.id}`)
       },
       {
         path: 'blog',
