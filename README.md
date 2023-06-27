@@ -21,4 +21,4 @@
     In this page a single chefs information and his food recipes decleared. there is a favourite button. when the favourite button clicked a successful toast comming.
 
 Live-Link:
-    "https://assignment-ten-b6ea0.web.app"
+    "https://assignment-ten-b6ea0.web.app"# tasty-foods
