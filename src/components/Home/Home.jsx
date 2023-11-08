@@ -12,18 +12,24 @@ const Home = () => {
     return (
         <div className='max-w-screen-2xl mx-auto bg-slate-800 '>
             <div>
-            <div className="carousel md:h-[600px]  w-full">
+            <div className="carousel md:h-[700px]  w-full">
   <div id="slide1" className="carousel-item relative w-full">
-    <img src="https://media.istockphoto.com/id/1409730000/photo/chef-cooking-at-a-restaurant-and-flaming-the-food.jpg?s=612x612&w=0&k=20&c=v1U3UCAx268DiaiteLNGc75rio3DLWTwOacyVmxS6cY=" className="w-full" />
+    <img src="https://i.ibb.co/RjV5xW3/Screenshot-2023-11-08-175111.png" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 ms-10 right-5 top-1/2">
       <a href="#slide4" className="btn btn-circle">❮</a> 
-      <a href="#slide2" className="btn btn-circle">❯</a>
+      <div className="absolute md:ms-40 flex items-center h-full left-0 rounded-xl text-white md:w-[50%]  bg-gradient-to-r from-[rgba(21,21,21,0)] to-[rgba(21,21,21,0)]">
+                    <p><span className="text-4xl font-bold">Music Instrument </span><br /> The guitar is a versatile string instrument, available in acoustic and electric variants. It produces sound when the strings are plucked or strummed. Players press the strings against frets to change the pitch. With its distinct shape and wide range of sounds, the guitar is popular across diverse music genres.</p>
+                    </div>
+      <a href="#slide2" className=" btn btn-circle ">❯</a>
     </div>
   </div> 
   <div id="slide2" className="carousel-item relative w-full">
     <img src="https://media.istockphoto.com/id/1162911786/photo/the-team-of-cooks-backs-in-the-work-in-the-modern-kitchen-the-workflow-of-the-restaurant-in.jpg?s=612x612&w=0&k=20&c=Nn1xO1gbUGnEzTHp4Sitg_ouob_co3jY5hDv_kHWzxE=" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide1" className="btn btn-circle">❮</a> 
+      <div className="absolute md:ms-40 flex items-center h-full left-0 rounded-xl text-white md:w-[50%]  bg-gradient-to-r from-[rgba(21,21,21,0)] to-[rgba(21,21,21,0)]">
+                    <p><span className="text-4xl font-bold">Music Instrument </span><br /> The guitar is a versatile string instrument, available in acoustic and electric variants. It produces sound when the strings are plucked or strummed. Players press the strings against frets to change the pitch. With its distinct shape and wide range of sounds, the guitar is popular across diverse music genres.</p>
+                    </div>
       <a href="#slide3" className="btn btn-circle">❯</a>
     </div>
   </div> 
@@ -31,6 +37,9 @@ const Home = () => {
     <img src="https://media.istockphoto.com/id/1299738603/photo/portrait-of-handsome-man-in-kitchen.jpg?s=612x612&w=0&k=20&c=WFTnk_KGRnihKeWcCv2CZIQmqe952kfCOS6-ZFT9vaQ=" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide2" className="btn btn-circle">❮</a> 
+      <div className="absolute md:ms-40 flex items-center h-full left-0 rounded-xl text-white md:w-[50%]  bg-gradient-to-r from-[rgba(21,21,21,0)] to-[rgba(21,21,21,0)]">
+                    <p><span className="text-4xl font-bold">Music Instrument </span><br /> The guitar is a versatile string instrument, available in acoustic and electric variants. It produces sound when the strings are plucked or strummed. Players press the strings against frets to change the pitch. With its distinct shape and wide range of sounds, the guitar is popular across diverse music genres.</p>
+                    </div>
       <a href="#slide4" className="btn btn-circle">❯</a>
     </div>
   </div> 
@@ -38,6 +47,10 @@ const Home = () => {
     <img src="https://media.istockphoto.com/id/1146261080/photo/chef-finishing-healthy-salad-on-a-black-plate-with-tweezers-almost-ready-to-serve-it-on-a.jpg?s=612x612&w=0&k=20&c=78_UgFxxUBLsQcgL2oI6JRDibAqO4hkNldJ_DyA55KU=" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide3" className="btn btn-circle">❮</a> 
+      <div className="absolute md:ms-40 flex items-center h-full left-0 rounded-xl text-white md:w-[50%] from-[rgba(21,21,21,0)] to-[rgba(21,21,21,0)]">
+      {/* bg-gradient-to-r from-[#080404] to-[rgba(21,21,21,0)] */}
+                    <p><span className="text-4xl font-bold">Music Instrument </span><br /> The guitar is a versatile string instrument, available in acoustic and electric variants. It produces sound when the strings are plucked or strummed. Players press the strings against frets to change the pitch. With its distinct shape and wide range of sounds, the guitar is popular across diverse music genres.</p>
+                    </div>
       <a href="#slide1" className="btn btn-circle">❯</a>
     </div>
   </div>
@@ -90,7 +103,7 @@ const Home = () => {
             </div> */}
            <div className='mt-10'>
             <h1 className='text-4xl text-orange-600 text-center font-bold mt-10 mb-10'>Chef Information</h1>
-           <div className='grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center w-[99%] mx-auto md:ms-16 '>
+           <div className='grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center w-[99%] mx-auto lg:ms-16 '>
            {
     chef && chef.map(singleChef => <Cart key={singleChef.id} chef={singleChef}></Cart>)
 }
@@ -103,7 +116,7 @@ const Home = () => {
     <img src='https://media.istockphoto.com/id/1181904833/photo/he-is-in-his-element-when-cooking.jpg?s=612x612&w=0&k=20&c=qqyEY_C-adebdFQ0_wNDzMK7LJDAtdp-8Rmj4qtL_-s=' className="w-1/2 absolute right-5 top-1/2 rounded-lg border-8 border-base-200 shadow-2xl" />
     </div>
     <div className='md:w-1/2 space-y-5 p-4'>
-        <h3 className='text-5xl  text-orange-600 font-bold'>About Us...</h3>
+        <h3 className='text-5xl  text-orange-600 font-bold mt-12 md:mt-0'>About Us...</h3>
       <h1 className="text-4xl font-bold text-white">Tasty Foods website <br /> for get knowledge <br /> about Famous Chef.</h1>
       <p className="py-6 text-white">"Discover Chef John Smith, a Le Cordon Bleu-trained culinary artist with 15+ years of experience. He embraces the farm-to-table concept, seamlessly blending French traditions with global influences. Renowned for dishes like 'Bouillabaisse à la Provençale' and 'Chocolate Fondant,' he leads the Michelin-starred La Maison de Saveurs in New York City. John's commitment to innovation earned him the James Beard Foundation's 'Rising Star Chef of the Year' award." </p>
     </div>

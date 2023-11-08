@@ -27,7 +27,7 @@ const Header = () => {
         <li><Active to="/Register">Register</Active></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-3xl font-bold text-orange-500">Tasty Foods</a>
+    <a className="btn btn-ghost normal-case text-xl md:text-3xl font-bold text-orange-500">Tasty Foods</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
