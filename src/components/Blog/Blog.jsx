@@ -14,7 +14,7 @@ const Blog = () => {
   }
 
     return (
-        <div>
+        <div className='max-w-screen-2xl mx-auto p-6 bg-slate-900 text-white'>
             <Document file="somefile.pdf" onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} />
       </Document>

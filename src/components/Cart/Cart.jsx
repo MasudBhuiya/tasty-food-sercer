@@ -12,8 +12,8 @@ const {user} = useContext(AuthContext)
               navigate(`/details/${id}`)
     }
     return (
-        <div className="card md:w-96 bg-base-100 shadow-xl pt-2 mb-3 ">
-  <figure className=''><img className='rounded' src={picture} alt="Shoes" /></figure>
+        <div className="card md:w-96 bg-base-100 shadow-xl  mb-3 ">
+  <figure className=''><img className='rounded w-full h-60' src={picture} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{name}</h2>
     <p>Years of Experience: {yearsOfExperience}</p>

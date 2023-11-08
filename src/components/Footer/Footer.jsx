@@ -23,6 +23,18 @@ const Footer = () => {
     <a className="link link-hover">Privacy policy</a>
     <a className="link link-hover">Cookie policy</a>
   </div>
+  <div>
+    <span className="footer-title">Contact</span> 
+    <a className="link link-hover">Terms of use</a>
+    <a className="link link-hover">Privacy policy</a>
+    <a className="link link-hover">Cookie policy</a>
+  </div>
+  <div>
+    <span className="footer-title">Information</span> 
+    <a className="link link-hover">Terms of use</a>
+    <a className="link link-hover">Privacy policy</a>
+    <a className="link link-hover">Cookie policy</a>
+  </div>
 </footer>
     );
 };
