@@ -14,8 +14,8 @@ const Home = () => {
             <div>
             <div className="carousel md:h-[600px]  w-full">
   <div id="slide1" className="carousel-item relative w-full">
-    <img src="https://media.istockphoto.com/id/664222314/photo/cooking-together.jpg?s=612x612&w=0&k=20&c=BpJ6gRWOCWevPmYnG64lmwEqIg6rCncy2bHyfZY5suM=" className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+    <img src="https://media.istockphoto.com/id/1409730000/photo/chef-cooking-at-a-restaurant-and-flaming-the-food.jpg?s=612x612&w=0&k=20&c=v1U3UCAx268DiaiteLNGc75rio3DLWTwOacyVmxS6cY=" className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 ms-10 right-5 top-1/2">
       <a href="#slide4" className="btn btn-circle">❮</a> 
       <a href="#slide2" className="btn btn-circle">❯</a>
     </div>
@@ -28,14 +28,14 @@ const Home = () => {
     </div>
   </div> 
   <div id="slide3" className="carousel-item relative w-full">
-    <img src="https://media.istockphoto.com/id/1139610466/photo/chef-serving-spaghetti.jpg?s=612x612&w=0&k=20&c=XqN8fowXYdCr8A5YX2ERqH5gyQmq0JJZlugXHCVsP40=" className="w-full" />
+    <img src="https://media.istockphoto.com/id/1299738603/photo/portrait-of-handsome-man-in-kitchen.jpg?s=612x612&w=0&k=20&c=WFTnk_KGRnihKeWcCv2CZIQmqe952kfCOS6-ZFT9vaQ=" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide2" className="btn btn-circle">❮</a> 
       <a href="#slide4" className="btn btn-circle">❯</a>
     </div>
   </div> 
   <div id="slide4" className="carousel-item relative w-full">
-    <img src="https://media.istockphoto.com/id/1333900248/photo/man-cooking-meat-steak-raw-filet-mignon-steak-covered-bacon-medallions-steaks-banner-menu.jpg?s=612x612&w=0&k=20&c=gs-TLk7u2FFOhswYMmmIbC5DocjTI6P7J9DxN6K-E8I=" className="w-full" />
+    <img src="https://media.istockphoto.com/id/1146261080/photo/chef-finishing-healthy-salad-on-a-black-plate-with-tweezers-almost-ready-to-serve-it-on-a.jpg?s=612x612&w=0&k=20&c=78_UgFxxUBLsQcgL2oI6JRDibAqO4hkNldJ_DyA55KU=" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide3" className="btn btn-circle">❮</a> 
       <a href="#slide1" className="btn btn-circle">❯</a>

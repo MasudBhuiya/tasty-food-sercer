@@ -24,12 +24,12 @@ const Details = () => {
     }
 
     return (
-        <div>
+        <div className='bg-slate-700 max-w-screen-2xl mx-auto'>
             <div>
-            <div className="card lg:card-side bg-slate-200 shadow-xl p-4">
-                    <figure><img className='md:w-[600px] lg:w-[1000px]' src={picture} alt="Album" /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-2xl font-bold">{name}</h2>
+            <div className="card lg:card-side bg-slate-200 shadow-xl  p-4">
+                    <figure><img className='md:w-[600px]  rounded-xl' src={picture} alt="Album" /></figure>
+                    <div className="card-body w-[60%]">
+                        <h2 className="card-title text-2xl font-bold text-orange-600">{name}</h2>
                         <p>{bio}</p>
                         <p className='font-bold'>Likes: {likes}</p>
                         <p className='font-bold'>Recipes: {numberOfRecipes}</p>
@@ -40,7 +40,7 @@ const Details = () => {
                 </div>
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 w-[90%] mx-auto justify-between mt-12'>
-                <div className="card sm:w-96  bg-base-100 shadow-xl pt-2 mb-3 ">
+                <div className="card sm:w-96  bg-base-100 shadow-xl  mb-3 ">
                     <figure className='h-64'><img className='rounded' src={recipes[0].image} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="font-bold text-2xl">{recipes[0].title}</h2>
@@ -54,7 +54,7 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card sm:w-96 bg-base-100 shadow-xl pt-2 mb-3 ">
+                <div className="card sm:w-96 bg-base-100 shadow-xl  mb-3 ">
                     <figure className='h-64'><img className='rounded' src={recipes[1].image} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="font-bold text-2xl">{recipes[1].title}</h2>
@@ -67,7 +67,7 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card sm:w-96 bg-base-100 shadow-xl pt-2 mb-3 ">
+                <div className="card sm:w-96 bg-base-100 shadow-xl 2 mb-3 ">
                     <figure className='h-64'><img className='rounded' src={recipes[2].image} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="font-bold text-2xl">{recipes[2].title}</h2>
