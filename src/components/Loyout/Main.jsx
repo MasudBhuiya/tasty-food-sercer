@@ -5,10 +5,12 @@ import Footer from '../Footer/Footer';
 
 const Main = () => {
     return (
-        <div>
+        <div className='bg-[#FEF7E5]'>
             <Header></Header>
             <Outlet></Outlet>
+            <div className='relative top-0 bottom-0'>
             <Footer></Footer>
+            </div>
         </div>
     );
 };

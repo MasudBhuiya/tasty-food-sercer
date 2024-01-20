@@ -19,6 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 import Error from './components/Error/Error.jsx';
 import Blog from './components/Blog/Blog.jsx';
+import Contact from './components/Contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: 'blog',
         element: <Blog></Blog>
+      },
+      {
+        path: 'contact',
+        element: <Contact></Contact>
       }
       
     ]
