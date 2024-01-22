@@ -101,7 +101,7 @@ const Home = () => {
 
       <div className='mt-10 max-w-screen-2xl mx-auto'>
         <h1 className='text-4xl text-orange-600 text-center font-bold mt-10 mb-10'>Chef Information</h1>
-        <div className='flex flex-wrap gap-8 justify-center items-center w-[99%] mx-auto '>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto  justify-between mt-12'>
           {
             chef && chef.map(singleChef => <Cart key={singleChef.id} chef={singleChef}></Cart>)
           }
@@ -109,13 +109,13 @@ const Home = () => {
       </div>
 
       <div className='bg-[#fceeca]'>
-        <div className='md:flex justify-between relative p-4 md:h-[608px]  max-w-screen-2xl pt-8 mx-auto mt-28'>
+        <div className='md:flex justify-between relative  md:h-[608px]  max-w-screen-2xl pt-8 mx-auto mt-28'>
           <div className=' text-center justify-between p-3 md:w-[50%] mx-auto'>
             <h1 className='text-5xl text-orange-500 font-bold mb-4 lg:mt-28'>Chef Description</h1>
             <p >As a chef at our popular restaurant, you will have the opportunity to create a stunning selection of diverse menu items for our customers. You will be able to put your skills to good use creating masterful dishes for lunch and dinner, as well as mouthwatering desserts and appetizers.</p>
           </div>
           <div className='md:w-[600px]'>
-            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hlZnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" />
+            <img className='rounded-xl' src="https://img.freepik.com/premium-photo/portrait-smiling-male-chef-standing-kitchen-counter-cutting-vegetables_23-2147863744.jpg?size=626&ext=jpg&ga=GA1.1.110381157.1659454590&semt=sph" alt="" />
           </div>
         </div>
       </div>
@@ -140,8 +140,8 @@ const Home = () => {
 
 
 
-      <div className="hero py-16 relative md:-top-20">
-        <div className="hero-content flex-col  lg:flex-row">
+      <div className="hero relative md:-top-20">
+        <div className="hero-content flex-col justify-between lg:flex-row">
           <div className='lg:w-1/2 relative'>
             <img src='https://media.istockphoto.com/id/1059836070/photo/action-portrait-of-male-chef-tossing-ingredients-in-bowl.jpg?s=612x612&w=0&k=20&c=ZvEX3WWVSXEV9B7JO2iHOhIAK1t34IuphZ2J36oy7tI=' className="w-3/4  rounded-lg shadow-2xl" />
             <img src='https://media.istockphoto.com/id/1181904833/photo/he-is-in-his-element-when-cooking.jpg?s=612x612&w=0&k=20&c=qqyEY_C-adebdFQ0_wNDzMK7LJDAtdp-8Rmj4qtL_-s=' className="w-1/2 absolute right-5 top-1/2 rounded-lg border-8 border-base-200 shadow-2xl" />

@@ -14,7 +14,7 @@ const Header = () => {
     })
   }
     return (
-        <div className="navbar py-6 max-w-[1550px] mx-auto bg-opacity-80">
+        <div className="navbar py-6 max-w-[1550px]  mx-auto bg-opacity-80">
   <div className="navbar-start ">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -23,6 +23,7 @@ const Header = () => {
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li><Active to="/">Home</Active></li>
         <li><Active to="/contact">Contact</Active></li>
+        <li><Active to="/about">About</Active></li>
         <li><Active to="/blog">Blog</Active></li>
         <li><Active to="/login">Login</Active></li>
         <li><Active to="/Register">Register</Active></li>
@@ -34,6 +35,7 @@ const Header = () => {
     <ul className="menu text-white menu-horizontal font-bold px-1">
     <li><Active to="/">Home</Active></li>
         <li><Active to="/contact">Contact</Active></li>
+        <li><Active to="/about">About</Active></li>
         <li><Active to="/blog">Blog</Active></li>
         <li><Active to="/login">Login</Active></li>
         <li><Active to="/Register">Register</Active></li>

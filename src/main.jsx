@@ -20,6 +20,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 import Error from './components/Error/Error.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import Contact from './components/Contact/Contact.jsx';
+import About from './components/About/About.jsx';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact></Contact>
+      },
+      {
+        path: 'about',
+        element: <About></About>
       }
       
     ]
